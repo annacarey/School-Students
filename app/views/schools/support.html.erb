@@ -1,0 +1,12 @@
+<%=form_tag do%>
+<label>Name: </label>
+<%=text_field_tag :name%>
+<br>
+<label>Email: </label>
+<%=text_field_tag :email%>
+<br>
+<label>Reason: </label>
+<%=text_field_tag :reason%>
+<br>
+<%end%>
+<%= button_to('Submit', schools_path, method: "get")%>

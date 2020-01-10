@@ -1,0 +1,7 @@
+<h1>Teacher#show</h1>
+<p><%=@teacher.name%></p>
+<h3>Courses: </h3>
+<%@courses.each do |course|%>
+<p><%=link_to course.name, course_path("#{course.teacher_id}-#{course.name}")%></p>
+<%end%>
+<%=button_to "Edit", edit_teacher_path(@teacher.id), method: "get"%>

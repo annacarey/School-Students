@@ -1,0 +1,12 @@
+<h1>Courses#show</h1>
+
+<h3>Course name:</h3>
+<%=@course.name%>
+
+<h3>Teacher name:</h3>
+<%=link_to @teacher.name, teacher_path(@teacher.id)%>
+
+<h3>Students:</h3>
+<%@students.each do |student|%>
+<p><%=link_to student.name, student_path(student.id)%></p>
+<%end%>

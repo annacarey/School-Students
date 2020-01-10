@@ -1,0 +1,8 @@
+<h1>Courses#new</h1>
+<%=form_for @course do |f|%>
+<label>Course name: </label>
+<%=f.text_field :name%>
+<%=f.collection_select :teacher_id, @teachers, :id, :name%>
+<%=f.collection_check_boxes :course_students, @students, :id, :name%>
+<%=f.submit%>
+<%end%>

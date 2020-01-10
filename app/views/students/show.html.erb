@@ -1,0 +1,11 @@
+<h1><%=@student.name%></h1>
+<p><%=@student.age%></p>
+
+<p><%=link_to @school.name, school_path(@school.id)%></p>
+
+<br>
+
+<h3>Courses:</h3>
+<%@courses.each do |course|%>
+<p><%=link_to course.name, course_path("#{course.teacher_id}-#{course.name}")%></p>
+<%end%>
